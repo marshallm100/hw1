@@ -381,6 +381,12 @@ INSERT INTO characters (
   "3"
 );
 
+INSERT INTO studios (
+    studio_name
+) values (
+    "Warner Bros."
+);
+
 
 
 -- Prints a header for the movies output
@@ -390,7 +396,7 @@ INSERT INTO characters (
 
 -- The SQL statement for the movies output
 -- TODO!
-Select movies.title, movies.year_released, movies.MPAA_rating from movies;
+Select movies.title, movies.year_released, movies.MPAA_rating, studios.studio_name from movies inner join studios on movies.studio_id = studios.id;
 
 -- Prints a header for the cast output
 .print ""
